@@ -85,6 +85,8 @@ python src/ingest.py
 python src/chat.py
 ```
 
+Digite suas perguntas no terminal. Para encerrar, digite `sair` ou pressione `Ctrl+C`.
+
 ## Tecnologias
 
 - Python 3.12
