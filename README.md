@@ -46,7 +46,11 @@ GOOGLE_LLM_MODEL='gemini-2.5-flash-lite'
 DATABASE_URL='postgresql+psycopg://postgres:postgres@localhost:5432/rag'
 PG_VECTOR_COLLECTION_NAME='rag_documents'
 PDF_PATH='document.pdf'
+INGEST_BATCH_SIZE=10
+INGEST_BATCH_DELAY=60
 ```
+
+A ingestão envia os chunks para a API de embeddings em lotes. `INGEST_BATCH_SIZE` define quantos chunks são enviados por lote e `INGEST_BATCH_DELAY` define o intervalo em segundos entre cada lote, para não exceder o rate limit da API do Google.
 
 4. Crie e ative o ambiente virtual:
 
